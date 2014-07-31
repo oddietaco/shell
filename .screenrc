@@ -1,0 +1,12 @@
+startup_message off # Turn the welcome screen message off
+altscreen on # Support xterm
+term screen-256color
+
+escape ^Zz # Use Ctrl-Z rather than Ctrl-A
+bind ',' prev
+bind '.' next
+
+# change the hardstatus settings to give an window list at the bottom of the
+# screen, with the time and date and with the current window highlighted
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
